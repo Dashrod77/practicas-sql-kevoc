@@ -12,6 +12,7 @@ Qué debe hacer y entregar: Un EVENT diario que detecte equipos con fecha_proxim
 Nota: auditoria tiene usuario_id nullable, así que puede insertar sin usuario.
 Probar:
 SELECT codigo_inventario, fecha_proximo_mantenimiento FROM equipo WHERE fecha_proximo_mantenimiento BETWEEN CURDATE() AND CURDATE()+INTERVAL 7 DAY; SELECT * FROM auditoria WHERE tabla_afectada='equipo' ORDER BY auditoria_id DESC LIMIT 5;
+-- check
 
 JOB03 — Expirar reservas
 
