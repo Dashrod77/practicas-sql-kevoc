@@ -1,0 +1,10 @@
+DELIMITER $$
+
+CREATE EVENT job01
+ON SCHEDULE EVERY 1 DAY
+DO
+BEGIN
+    DECLARE cur CURSOR FOR
+    SELECT estado FROM prestamo WHERE nombre AND estado = 'activo';
+
+
